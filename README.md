@@ -15,7 +15,9 @@ ERC‑4626 is a Tokenized Vault Standard that defines a canonical interface for 
 What exactly is a 'Program'?
 Solana Programs are shared ELF‑BPF binaries deployed once and reused forever. They are pure logic - stateless, immutable, upgradeable only via a governance‑controlled “ProgramData” account.
 
-(Latex)
+Program  ──┐
+           └─> handles instructions
+Accounts ───┘  (carry all mutable state)
 
 Deployment feel: Think of Uniswap‑v2 Router being the only swap contract you’ll ever deploy; every new liquidity pool would instead be a new data account the Router controls.
 
