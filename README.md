@@ -32,7 +32,7 @@ The token::transfer(...) call above makes a cross‑program invocation to the SP
 **Deposit**
 - Tx includes: user’s Token Account (signer), Vault Token Account (writable), Share Mint (writable), Vault State PDA (writable).
 - CPI #1 → spl_token::transfer user → vault.
-﻿- CPI #2 → spl_token::mint_to shares → user.
+- CPI #2 → spl_token::mint_to shares → user.
 
 **Withdraw / Redeem**
 - Reverse order: burn shares → transfer underlying out.
